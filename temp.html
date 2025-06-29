@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EZHOI: Efficient Zero-shot Human-Object Interaction</title>
+    <link rel="stylesheet" href="style.css"> <!-- Include a CSS file if necessary -->
+    <style>
+        .abstract p {
+            max-width: 800px; /* Adjust this value to fit your layout */
+            margin: 0 auto; /* Center the paragraph */
+            line-height: 1.6; /* Increase line height for better readability */
+            font-size: 1.1em; /* Slightly larger font size, adjust as needed */
+            text-align: justify; /* Optional: Justify text for a more polished look */
+        }
+        .bibtex {
+            background-color: #f8f8f8; /* Light grey background */
+            border: 1px solid #ddd; /* Border around the BibTeX section */
+            border-radius: 4px; /* Slightly rounded corners */
+            padding: 15px; /* Padding inside the box */
+            margin: 20px 0; /* Margin above and below the section */
+        }
+
+        .bibtex h2 {
+            margin-bottom: 10px; /* Space below the heading */
+        }
+
+        .bibtex pre {
+            text-align: left; /* Keep text aligned to the left */
+            margin-left: auto; /* Automatically adjust left margin */
+            margin-right: auto; /* Automatically adjust right margin */
+            max-width: 800px; /* Set a reasonable max width for the BibTeX block */
+            white-space: pre-wrap; /* Enable wrapping */
+            word-wrap: break-word; /* Ensure long words break to fit */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 24px;
+            color: #555;
+        }
+        .authors {
+            margin-bottom: 20px;
+        }
+        .authors a {
+            text-decoration: none;
+            color: #1a73e8; /* Blue color for author links */
+            font-weight: bold;
+        }
+        .affiliations {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .conference {
+            color: purple;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        .highlight {
+            background-color: #ffdb58;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+        .buttons a {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .buttons a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Paper Title -->
+    <h1>Efficient Zero-Shot HOI Detection: Enhancing VLM Adaptation with Innovative Prompt Learning</h1>
+
+    <!-- Authors with personal websites -->
+    <div class="authors">
+        <a href="https://chelsielei.github.io/" target="_blank">Qinqian Lei<sup>1</sup></a>, 
+        <a href="https://hawkrsrch.github.io/" target="_blank">Bo Wang<sup>2</sup></a>, 
+        <a href="https://tanrobby.github.io/index.html" target="_blank">Robby T. Tan<sup>1,3</sup></a>
+    </div>
+
+    <!-- Affiliations -->
+    <div class="affiliations">
+        <sup>1</sup>National University of Singapore, <sup>2</sup>University of Mississippi, <sup>3</sup>ASUS Intelligent Cloud Services (AICS)
+    </div>
+    <!-- Conference info -->
+    <div class="conference">
+        NeurIPS 2024, Vancouver
+    </div>
+
+    <!-- Buttons for external links -->
+    <div class="buttons">
+        <a href="https://arxiv.org" target="_blank">arXiv</a>
+        <!-- <a href="https://video-link.com" target="_blank">Video</a> -->
+        <!-- <a href="https://slides-link.com" target="_blank">Slides</a> -->
+        <a href="https://github.com/ChelsieLei/EZ-HOI" target="_blank">Code</a>
+    </div>
+
+
+    <!-- Teaser Image (placed right before abstract) -->
+    <img src="./imgs/teaser.jpg" alt="An Efficient Zero-shot HOI detection method with good generalization ability to unseen classes and small computational cost" style="width:80%; max-width:800px; margin-bottom: 30px;">
+
+
+    <!-- Paper Abstract
+    <h2>Abstract</h2>
+    <p style="width: 80%; margin: 0 auto; font-size: 18px; line-height: 1.6;">
+        Detecting human-object interactions (HOI) in zero-shot settings, where models must handle unseen classes, poses significant challenges. Existing methods that rely on aligning visual encoders with large Vision-Language Models (VLMs) to tap into the extensive knowledge of VLMs, require large, computationally expensive models and encounter training difficulties. Adapting VLMs with prompt learning offers an alternative to direct alignment. However, fine-tuning on task-specific datasets often leads to overfitting to seen classes and suboptimal performance on unseen classes, due to the absence of unseen class labels. To address these challenges, we introduce EZ-HOI, a novel prompt learning-based framework for efficient zero-shot HOI detection. First, we introduce LLM and VLM guidance for learnable prompts to enrich the prompt knowledge and benefit the adaptation to HOI tasks. However, because training datasets contain seen-class labels alone, fine-tuning VLMs on such datasets tends to optimize text prompts for seen classes instead of unseen ones. Therefore, we design text prompt learning for unseen classes by learning from related seen classes. Considering the difference between unseen and related seen classes, large language models (LLM) are utilized to provide the disparity information to further improve prompt learning for unseen classes. Quantitative evaluations on benchmark datasets demonstrate that our EZ-HOI achieves state-of-the-art performance across various zero-shot settings with only 10.35% to 33.95% of the trainable parameters compared to existing methods.
+    </p> -->
+
+
+    <!-- Abstract Section -->
+    <section class="section abstract">
+        <h2>Abstract</h2>
+        <p>
+            Detecting human-object interactions (HOI) in zero-shot settings, where models must handle unseen classes, poses significant challenges. Existing methods that rely on aligning visual encoders with large Vision-Language Models (VLMs) to tap into the extensive knowledge of VLMs, require large, computationally expensive models and encounter training difficulties. Adapting VLMs with prompt learning offers an alternative to direct alignment. However, fine-tuning on task-specific datasets often leads to overfitting to seen classes and suboptimal performance on unseen classes, due to the absence of unseen class labels. To address these challenges, we introduce EZ-HOI, a novel prompt learning-based framework for efficient zero-shot HOI detection. First, we introduce LLM and VLM guidance for learnable prompts to enrich the prompt knowledge and benefit the adaptation to HOI tasks. However, because training datasets contain seen-class labels alone, fine-tuning VLMs on such datasets tends to optimize text prompts for seen classes instead of unseen ones. Therefore, we design text prompt learning for unseen classes by learning from related seen classes. Considering the difference between unseen and related seen classes, large language models (LLM) are utilized to provide the disparity information to further improve prompt learning for unseen classes. Quantitative evaluations on benchmark datasets demonstrate that our EZ-HOI achieves state-of-the-art performance across various zero-shot settings with only 10.35% to 33.95% of the trainable parameters compared to existing methods.
+        </p>
+    </section>
+
+    <!-- Teaser Figure Section (OPTION 1: After Abstract)
+    <section class="section figure">
+        <h2>Teaser Figure</h2>
+        <p>An Efficient Zero-shot HOI detection method with good generalization ability to unseen classes and small computational cost.</p>
+        <img src="./imgs/teaser.jpg" alt="Teaser Figure" style="width:80%; max-width:800px; margin-bottom: 30px;">
+    </section> -->
+
+    <!-- Pipeline Figure and Illustration Section -->
+    <section class="section figure">
+        <h2>Pipeline and Illustration</h2>
+        <p>Below is the pipeline diagram of our method:</p>
+        <img src="./imgs/pipeline.jpg" alt="Pipeline Figure" style="width:80%; max-width:800px; margin-bottom: 30px;">
+    </section>
+
+    <!-- Results Section -->
+    <section class="section results">
+        <h2>Qualitative and Quantitative Results</h2>
+
+        <h3>Qualitative Results</h3>
+        <p>Here are some qualitative results comparison between our method and MaPLe:</p>
+        <img src="./imgs/vis_result_main.jpg" alt="Qualitative Results" style="width:80%; max-width:800px; margin-bottom: 30px;">
+
+        <h3>Quantitative Results</h3>
+        <p>Here are critical experiment results in zero-shot HOI detection:</p>
+        <img src="./imgs/quantitative_results.jpg" alt="Quantitative Results" style="width:80%; max-width:800px; margin-bottom: 30px;">
+    </section>
+
+    <!-- Citation Format Section -->
+    <section class="section bibtex">
+        <h2>BibTeX</h2>
+        <pre>
+    @inproceedings{lei2024efficient,
+      title     = {Efficient Zero-Shot HOI Detection: Enhancing VLM Adaptation with Innovative Prompt Learning},
+      author    = {Lei, Qinqian and Wang, Bo and Robby T., Tan},
+      booktitle = {The Thirty-eighth Annual Conference on Neural Information Processing Systems},
+      year      = {2024}
+    }
+        </pre>
+    </section>
+    <!-- <section class="section citation">
+        <h2>Citation</h2>
+        <p class="cite">
+            Qinqian Lei, Bo Wang, Robby T. Tan. Efficient Zero-Shot HOI Detection: Enhancing VLM Adaptation with Innovative Prompt Learning. Advances in Neural Information Processing Systems, 2024
+        </p>
+        <p>Here is the BibTeX entry for citation:</p>
+        <pre>
+@inproceedings{
+    lei2024efficient,
+    title={Efficient Zero-Shot HOI Detection: Enhancing VLM Adaptation with Innovative Prompt Learning},
+    author={Lei, Qinqian and Wang, Bo and Robby T., Tan},
+    booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},
+    year={2024}
+    }
+        </pre>
+    </section> -->
+</div>
+
+<footer>
+    <p>&copy; 2024 Qinqian Lei. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
