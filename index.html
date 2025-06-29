@@ -165,8 +165,8 @@
         <img src="./imgs/pipeline.jpg" alt="Framework overview" style="width:100%; max-width:800px; margin-bottom: 30px;">
         </div>
           <p>
-        In the language branch, VLM text HOI features are decomposed into HOI basis features \(\bm{\mathrm{B}}\) and HOI weights \(\bm{\mathrm{W}}\). Similarly, action features are decomposed into action basis features \(\bm{\mathrm{B}^a}\) and action weights \(\bm{\mathrm{W}^a}\), where \(\bm{\mathrm{B}^a}\) is selected from \(\bm{\mathrm{B}}\). 
-        The weight adaptation updates \(\bm{\mathrm{W}}\) with LLM-derived action regularization \(\bm{\mathrm{W}^a}\), containing LLM-generated action information. The text fusion module combines action and object text features. 
+        In the language branch, VLM text HOI features are decomposed into HOI basis features \( {\mathrm{B}}\) and HOI weights \( {\mathrm{W}}\). Similarly, action features are decomposed into action basis features \( {\mathrm{B}^a}\) and action weights \( {\mathrm{W}^a}\), where \( {\mathrm{B}^a}\) is selected from \( {\mathrm{B}}\). 
+        The weight adaptation updates \( {\mathrm{W}}\) with LLM-derived action regularization \( {\mathrm{W}^a}\), containing LLM-generated action information. The text fusion module combines action and object text features. 
 		    In the vision branch, we adapt the VLM visual encoder with human-object tokens. Then we crop humans, objects, and HOI union regions from encoder output ("H, O, U" in the figure). The image fusion module then combines human and object features. 
         The prediction combines vision and language branches. 
           </p>
