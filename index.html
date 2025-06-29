@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="EZ-HOI: VLM Adaptation via Guided Prompt Learning for Zero-Shot HOI Detection">
-  <meta name="keywords" content="Zero-shot detection, Human-object interaction detection, Prompt learning">
+        content="LoRD-HOI: Zero-Shot HOI Detection with Low-Rank Decomposed VLM Feature Adaptation">
+  <meta name="keywords" content="VLM adaptation, Low-rank decomposition, Zero-shot detection, Human-object interaction detection">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>EZ-HOI: VLM Adaptation via Guided Prompt Learning for Zero-Shot HOI Detection</title>
+  <title>LoRD-HOI: Zero-Shot HOI Detection with Low-Rank Decomposed VLM Feature Adaptation</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -42,45 +42,6 @@
 </head>
 <body>
 
-<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav> -->
 
 
 <section class="hero">
@@ -88,9 +49,9 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">EZ-HOI: VLM Adaptation via Guided Prompt Learning for Zero-Shot HOI Detection</h1>
+          <h1 class="title is-1 publication-title">LoRD-HOI: Zero-Shot HOI Detection with Low-Rank Decomposed VLM Feature Adaptation</h1>
           <div class="is-size-5 publication-authors">
-            <span class="author-block">NeurIPS 2024</span>
+            <span class="author-block">ICCV 2025</span>
         </div>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
@@ -111,18 +72,8 @@
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
-              <!-- <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span> -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2410.23904"
+                <a href="https://arxiv.org"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -130,19 +81,9 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
-              <!-- <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span> -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/ChelsieLei/EZ-HOI"
+                <a href="https://github.com/ChelsieLei/Lord-hoi"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -150,15 +91,7 @@
                   <span>Code</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
-              <!-- <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a> -->
+
             </div>
 
           </div>
@@ -172,77 +105,15 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <div class="content has-text-centered">
-      <img src="./imgs/teaser.jpg" alt="An Efficient Zero-shot HOI detection method with good generalization ability to unseen classes and small computational cost" style="width:80%; max-width:800px; margin-bottom: 30px;">
+      <img src="./imgs/teaser.jpg" alt="LoRD-HOI boosts zero-shot HOI detection with low-rank VLM feature adaptation" style="width:80%; max-width:800px; margin-bottom: 30px;">
     </div>
-      <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video> -->
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">EZ-HOI: </span> An Efficient Zero-shot HOI detection method 
-        with good generalization ability to unseen classes and with small computational cost
+        <span class="dnerf">Lord-HOI </span> boosts zero-shot HOI detection with low-rank VLM feature adaptation, achieving better action distinction and generalization ability.
       </h2>
     </div>
   </div>
 </section>
 
-
-<!-- <section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
 
 
 <section class="section">
@@ -253,16 +124,19 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-              Detecting human-object interactions (HOI) in zero-shot settings, where models must handle unseen classes, poses significant challenges. 
-              Existing methods that rely on aligning visual encoders with large Vision-Language Models (VLMs) to tap into the extensive knowledge of VLMs, require large, computationally expensive models and encounter training difficulties.
-              Adapting VLMs with prompt learning offers an alternative to direct alignment. However, fine-tuning on task-specific datasets often leads to overfitting to seen classes and suboptimal performance on unseen classes, due to the absence of unseen class labels. 
+              Zero-shot human-object interaction (HOI) detection remains a challenging task, particularly in generalizing to unseen actions. 
+              Existing methods address this challenge by tapping Vision-Language Models (VLMs) to access knowledge beyond the training data. 
+              However, they either struggle to distinguish actions involving the same object or demonstrate limited generalization to unseen classes.
           </p>
           <p>
-              To address these challenges, we introduce a novel prompt learning-based framework for Efficient Zero-Shot HOI detection (EZ-HOI). 
-              First, we introduce Large Language Model (LLM) and VLM guidance for learnable prompts, integrating detailed HOI descriptions and visual semantics to adapt VLMs to HOI tasks.
-              However, because training datasets contain seen-class labels alone, fine-tuning VLMs on such datasets tends to optimize learnable prompts for seen classes instead of unseen ones.
-              Therefore, we design prompt learning for unseen classes using information from related seen classes, with LLMs utilized to highlight the differences between unseen and related seen classes.
-              Quantitative evaluations on benchmark datasets demonstrate that our EZ-HOI achieves state-of-the-art performance across various zero-shot settings with only 10.35\% to 33.95\% of the trainable parameters compared to existing methods. 
+              In this paper, we introduce LoRD-HOI (Low-Rank Decomposed VLM Feature Adaptation for Zero-Shot HOI Detection), a novel approach that both enhances generalization to unseen classes and improves action distinction.
+              In training, LoRD-HOI decomposes VLM text features for given HOI classes via low-rank factorization, producing class-shared basis features and adaptable weights. 
+              These features and weights form a compact HOI representation that preserves shared information across classes, enhancing generalization to unseen classes. 
+              Subsequently, we refine action distinction by adapting weights for each HOI class and introducing human-object tokens to enrich visual interaction representations.
+              To further distinguish unseen actions, we guide the weight adaptation with LLM-derived action regularization.
+          </p>
+          <p>
+              Experimental results show that our method sets a new state-of-the-art across zero-shot HOI settings on HICO-DET, achieving an unseen-class mAP of 27.91 in the unseen-verb setting. 
           </p>
 
         </div>
@@ -281,17 +155,16 @@
         <h2 class="title is-3">Pipeline</h2>
         <div class="content has-text-justified">
            <p>
-           Overview of our proposed EZ-HOI framework.
+           Overview of our proposed pipeline.
           </p>
            <div class="content has-text-centered">
         <img src="./imgs/pipeline.jpg" alt="Framework overview" style="width:80%; max-width:800px; margin-bottom: 30px;">
         </div>
           <p>
-           Learnable text prompts capture detailed HOI class information from the LLM. To enhance their generalization ability, we introduce the
-          Unseen Text Prompt Learning (UTPL) module. Meanwhile, visual learnable prompts are guided by a
-          frozen VLM visual encoder. These learnable text and visual prompts are then separately input into
-          the text and visual encoder. Finally, HOI predictions are made by calculating the cosine similarity
-          between the text encoder output and the HOI image features.
+        In the language branch, VLM text HOI features are decomposed into HOI basis features $\bm{\mathrm{B}}$ and HOI weights $\bm{\mathrm{W}}$. Similarly, action features are decomposed into action basis features $\bm{\mathrm{B}^a}$ and action weights $\bm{\mathrm{W}^a}$, where $\bm{\mathrm{B}^a}$ is selected from $\bm{\mathrm{B}}$. 
+        The weight adaptation updates $\bm{\mathrm{W}}$ with LLM-derived action regularization $\bm{\mathrm{W}^a}$, containing LLM-generated action information. The text fusion module combines action and object text features. 
+		    In the vision branch, we adapt the VLM visual encoder with human-object tokens. Then we crop humans, objects, and HOI union regions from encoder output ("H, O, U" in the figure). The image fusion module then combines human and object features. 
+        The prediction combines vision and language branches. 
           </p>
 
         </div>
@@ -317,34 +190,12 @@
         <h3 class="title is-4">Qualitative Results</h3>
         <div class="content has-text-justified">
           <p>
-            Here are some qualitative results comparison between our method and MaPLe.
+            Here are some qualitative results.
           </p>
         </div>
         <div class="content has-text-centered">
         <img src="./imgs/vis_result_main.jpg" alt="Qualitative Results" style="width:80%; max-width:800px; margin-bottom: 30px;">
         </div>
-        <!-- <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div> -->
         <br/>
         <!--/ Interpolating. -->
 
@@ -357,50 +208,12 @@
         </div>
         <div class="content has-text-centered">
           <img src="./imgs/quantitative_results.jpg" alt="Quantitative Results" style="width:80%; max-width:800px; margin-bottom: 30px;">
-  
-          <!-- <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video> -->
         </div>
         <!--/ Re-rendering. -->
 
       </div>
     </div>
     <!--/ Experiments -->
-
-
-    <!-- Concurrent Work. -->
-    <!-- <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
-        </div>
-      </div>
-    </div> -->
-    <!--/ Concurrent Work. -->
 
   </div>
 </section>
@@ -409,11 +222,11 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>    @inproceedings{lei2024efficient,
-      title     = {EZ-HOI: VLM Adaptation via Guided Prompt Learning for Zero-Shot HOI Detection},
+    <pre><code>    @inproceedings{lei2025lordhoi,
+      title     = {LoRD-HOI: Zero-Shot HOI Detection with Low-Rank Decomposed VLM Feature Adaptation},
       author    = {Lei, Qinqian and Wang, Bo and Robby T., Tan},
-      booktitle = {The Thirty-eighth Annual Conference on Neural Information Processing Systems},
-      year      = {2024}
+      booktitle = {In Proceedings of the IEEE/CVF international conference on computer vision},
+      year      = {2025}
     }</code></pre>
   </div>
 </section>
