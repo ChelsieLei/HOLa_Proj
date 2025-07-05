@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="LoRD-HOI: Zero-Shot HOI Detection with Low-Rank Decomposed VLM Feature Adaptation">
+        content="HOLa: Zero-Shot HOI Detection with Low-Rank Decomposed VLM Feature Adaptation">
   <meta name="keywords" content="VLM adaptation, Low-rank decomposition, Zero-shot detection, Human-object interaction detection">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LoRD-HOI: Zero-Shot HOI Detection with Low-Rank Decomposed VLM Feature Adaptation</title>
+  <title>HOLa: Zero-Shot HOI Detection with Low-Rank Decomposed VLM Feature Adaptation</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -53,7 +53,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">LoRD-HOI: Zero-Shot HOI Detection with Low-Rank Decomposed VLM Feature Adaptation</h1>
+          <h1 class="title is-1 publication-title">HOLa: Zero-Shot HOI Detection with Low-Rank Decomposed VLM Feature Adaptation</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">ICCV 2025</span>
         </div>
@@ -87,7 +87,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/ChelsieLei/Lord-hoi"
+                <a href="https://github.com/ChelsieLei/HOLa"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -109,10 +109,10 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <div class="content has-text-centered">
-      <img src="./imgs/teaser.jpg" alt="LoRD-HOI boosts zero-shot HOI detection with low-rank VLM feature adaptation" style="width:60%; max-width:800px; margin-bottom: 30px;">
+      <img src="./imgs/teaser.jpg" alt="HOLa boosts zero-shot HOI detection with low-rank VLM feature adaptation" style="width:60%; max-width:800px; margin-bottom: 30px;">
     </div>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Lord-HOI </span> boosts zero-shot HOI detection with low-rank VLM feature adaptation, achieving better action distinction and generalization ability.
+        <span class="dnerf">HOLa </span> boosts zero-shot HOI detection with low-rank VLM feature adaptation, achieving better action distinction and generalization ability.
       </h2>
     </div>
   </div>
@@ -133,8 +133,8 @@
               However, they either struggle to distinguish actions involving the same object or demonstrate limited generalization to unseen classes.
           </p>
           <p>
-              In this paper, we introduce LoRD-HOI (Low-Rank Decomposed VLM Feature Adaptation for Zero-Shot HOI Detection), a novel approach that both enhances generalization to unseen classes and improves action distinction.
-              In training, LoRD-HOI decomposes VLM text features for given HOI classes via low-rank factorization, producing class-shared basis features and adaptable weights. 
+              In this paper, we introduce HOLa (Zero-Shot HOI Detection with Low-Rank Decomposed VLM Feature Adaptation), a novel approach that both enhances generalization to unseen classes and improves action distinction.
+              In training, HOLa decomposes VLM text features for given HOI classes via low-rank factorization, producing class-shared basis features and adaptable weights. 
               These features and weights form a compact HOI representation that preserves shared information across classes, enhancing generalization to unseen classes. 
               Subsequently, we refine action distinction by adapting weights for each HOI class and introducing human-object tokens to enrich visual interaction representations.
               To further distinguish unseen actions, we guide the weight adaptation with LLM-derived action regularization.
@@ -226,8 +226,8 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>    @inproceedings{lei2025lordhoi,
-      title     = {LoRD-HOI: Zero-Shot HOI Detection with Low-Rank Decomposed VLM Feature Adaptation},
+    <pre><code>    @inproceedings{lei2025lhola,
+      title     = {HOLa: Zero-Shot HOI Detection with Low-Rank Decomposed VLM Feature Adaptation},
       author    = {Lei, Qinqian and Wang, Bo and Robby T., Tan},
       booktitle = {In Proceedings of the IEEE/CVF international conference on computer vision},
       year      = {2025}
